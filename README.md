@@ -9,8 +9,7 @@
 - There are two separate data sets: Control and Test group. These data sets are on separate sheets of ab_testing.xlsxexcel. 
 - Maximum Bidding was applied to the control group and AverageBidding was applied to the test group.
 
-  # impression: Number of ad views
-
+ - impression: Number of ad views
  - Click: Number of clicks on the displayed ad
  - Purchase: Number of products purchased after clicked ads
  - Earning: Earnings from purchased products
