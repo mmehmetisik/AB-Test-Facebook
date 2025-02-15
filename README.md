@@ -45,6 +45,7 @@ pip install -r requirements.txt
 streamlit run app.py
 
 ## 📦 Requirements
+```bash
 streamlit>=1.28.0
 pandas>=1.5.3
 numpy>=1.24.3
@@ -53,6 +54,7 @@ plotly>=5.14.1
 seaborn>=0.12.2
 matplotlib>=3.7.1
 openpyxl>=3.1.2
+```
 
 ## 💻 Usage Guide
 
