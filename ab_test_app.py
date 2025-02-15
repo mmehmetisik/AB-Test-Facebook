@@ -1,3 +1,4 @@
+# Önceki tüm importlar aynen kalacak
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -16,15 +17,19 @@ SUCCESS_COLOR = "#28B463"
 WARNING_COLOR = "#F1C40F"
 ERROR_COLOR = "#E74C3C"
 
-# Custom CSS
+# Custom CSS - Ana başlık büyütüldü
 st.markdown("""
     <style>
     .main-title {
-        font-size: 40px;
+        font-size: 60px !important;
         font-weight: bold;
         color: #2E86C1;
         text-align: center;
-        margin-bottom: 30px;
+        margin: 40px 0;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .section-title {
         font-size: 24px;
@@ -54,7 +59,6 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-
 def load_data(uploaded_file):
     try:
         control_df = pd.read_excel(uploaded_file, sheet_name="Control Group")
@@ -64,9 +68,16 @@ def load_data(uploaded_file):
         st.error(f"Veri yükleme hatası: {str(e)}")
         return None, None
 
-
 def show_welcome():
     st.markdown('<p class="main-title">🎯 A/B Test Analiz ve Öğrenme Platformu</p>', unsafe_allow_html=True)
+
+    # Uyarı notu ekle
+    st.warning("""
+        ⚠️ **Önemli Not:** 
+        
+        Bu uygulama, GitHub reposunda verilen 'ab_testing.xlsx' dosyası için özelleştirilmiş ve öğrenme amacıyla yapılmıştır. 
+        Farklı bir veri seti ile uyumlu çalışmayabilir.
+    """)
 
     st.markdown("""
     ### 📚 Bu Platform Nedir?
